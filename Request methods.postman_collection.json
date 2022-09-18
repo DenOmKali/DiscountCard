@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "17b55a55-68fc-4b7e-80e1-34aec4619fc2",
+		"name": "Request methods",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20732778"
+	},
+	"item": [
+		{
+			"name": "Add new discount card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/card/add?discountNumber=12321&validity=12.12.2022&discountPercentage=30&owner=Denis&dateBirthday=02.08.2003&number=063192414&overdue=no",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"card",
+						"add"
+					],
+					"query": [
+						{
+							"key": "discountNumber",
+							"value": "12321"
+						},
+						{
+							"key": "validity",
+							"value": "12.12.2022"
+						},
+						{
+							"key": "discountPercentage",
+							"value": "30"
+						},
+						{
+							"key": "owner",
+							"value": "Denis"
+						},
+						{
+							"key": "dateBirthday",
+							"value": "02.08.2003"
+						},
+						{
+							"key": "number",
+							"value": "063192414"
+						},
+						{
+							"key": "overdue",
+							"value": "no"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all discount card and information",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/card/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"card",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search for a discount card by name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/card/owner?owner=Denis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"card",
+						"owner"
+					],
+					"query": [
+						{
+							"key": "owner",
+							"value": "Denis"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
